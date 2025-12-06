@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathigal Trust - Alternative Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* V2 Specific Overrides */
+        .hero-v2 {
+            height: auto;
+            min-height: 85vh;
+            background: var(--off-white);
+            display: flex;
+            align-items: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .hero-v2::before,
+        .hero-v2::after {
+            display: none;
+        }
+
+        /* Remove old overlays */
+
+        .hero-split-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .hero-text-v2 h1 {
+            color: var(--primary-green-dark);
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            text-shadow: none;
+        }
+
+        .hero-text-v2 p {
+            color: var(--dark-gray);
+            font-size: 1.25rem;
+            margin-bottom: 32px;
+            max-width: 90%;
+        }
+
+        .hero-image-v2 {
+            position: relative;
+        }
+
+        .hero-image-v2 img {
+            border-radius: var(--radius-lg) 0 var(--radius-lg) 0;
+            box-shadow: -20px 20px 0 var(--primary-green-light);
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 968px) {
+            .hero-v2 {
+                height: auto;
+                padding: 60px 0;
+            }
+
+            .hero-split-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text-v2 p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-image-v2 {
+                margin-top: 40px;
+            }
+
+            .hero-image-v2 img {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="logo.jpg" alt="Nathigal Trust"
+                        style="height: 50px; margin-right: 10px; border-radius: 50%;"> Nathigal Trust
+                </a>
+                <div class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Our Programs</a></li>
+                    <li><a href="impact.html">Our Impact</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="volunteering.html">Volunteer</a></li>
+                    <li><a href="donate.html" class="btn btn-cta">DONATE NOW</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero V2: Split Layout -->
+    <div class="hero-v2">
+        <div class="hero-split-container">
+            <div class="hero-text-v2 fade-in-up">
+                <h4>Welcome to Nathigal Trust</h4>
+                <h1>Empowering Communities, One Child at a Time.</h1>
+                <p>We are dedicated to providing nutrition, education, and hope to underprivileged children across the
+                    nation. Join us in building a sustainable future.</p>
+                <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                    <a href="donate.html" class="btn btn-cta">Make a Difference</a>
+                    <a href="about.html" class="btn btn-primary"
+                        style="background: transparent; color: var(--primary-green-dark); border: 2px solid var(--primary-green); box-shadow: none;">Learn
+                        More</a>
+                </div>
+            </div>
+            <div class="hero-image-v2 fade-in-up">
+                <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Happy Children">
+            </div>
+        </div>
+    </div>
+
+    <!-- Impact Counter (Same as Index but light bg maybe?) -->
+    <section class="section-padding" style="background: var(--white); padding-top: 0;">
+        <div class="container">
+            <div class="counter-grid" style="margin-top: -50px; position: relative; z-index: 5;">
+                <!-- Reusing existing classes but maybe adding a class to invert colors if needed, but existing is fine -->
+                <div class="counter-item"
+                    style="background: var(--primary-green); color: white; border-radius: var(--radius-md); box-shadow: var(--shadow-card);">
+                    <i class="fas fa-utensils"
+                        style="font-size: 2rem; color: var(--accent-gold); margin-bottom: 10px;"></i>
+                    <h3 style="color: white;" data-target="50000">0+</h3>
+                    <p>Meals Served</p>
+                </div>
+                <div class="counter-item"
+                    style="background: var(--primary-green); color: white; border-radius: var(--radius-md); box-shadow: var(--shadow-card);">
+                    <i class="fas fa-school"
+                        style="font-size: 2rem; color: var(--accent-gold); margin-bottom: 10px;"></i>
+                    <h3 style="color: white;" data-target="120">0+</h3>
+                    <p>Schools</p>
+                </div>
+                <div class="counter-item"
+                    style="background: var(--primary-green); color: white; border-radius: var(--radius-md); box-shadow: var(--shadow-card);">
+                    <i class="fas fa-user-graduate"
+                        style="font-size: 2rem; color: var(--accent-gold); margin-bottom: 10px;"></i>
+                    <h3 style="color: white;" data-target="15000">0+</h3>
+                    <p>Students</p>
+                </div>
+                <div class="counter-item"
+                    style="background: var(--primary-green); color: white; border-radius: var(--radius-md); box-shadow: var(--shadow-card);">
+                    <i class="fas fa-users"
+                        style="font-size: 2rem; color: var(--accent-gold); margin-bottom: 10px;"></i>
+                    <h3 style="color: white;" data-target="500">0+</h3>
+                    <p>Volunteers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rest of content similar to Index -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 60px;">Our Key Programs</h2>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <img src="https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Mid-day Meals">
+                    <div class="card-content">
+                        <h3>Mid-day Meals</h3>
+                        <p>Providing nutritious meals to ensure no child goes to school hungry.</p>
+                        <a href="programs.html#meals" class="btn-link">Learn More &rarr;</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Education Support">
+                    <div class="card-content">
+                        <h3>Education Support</h3>
+                        <p>Scholarships and supplies for deserving students from low-income families.</p>
+                        <a href="programs.html#education" class="btn-link">Learn More &rarr;</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Teacher Training">
+                    <div class="card-content">
+                        <h3>Teacher Training</h3>
+                        <p>Empowering educators with modern teaching methodologies.</p>
+                        <a href="programs.html#training" class="btn-link">Learn More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <a href="index.html" class="logo" style="margin-bottom: 20px;">
+                    <img src="logo.jpg" alt="Nathigal Trust" style="height: 50px; margin-right: 10px; border-radius: 50%;"> Nathigal Trust
+                </a>
+                <p>Nourishing futures through nutrition and education.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Our Programs</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>info@nathigaltrust.org</p>
+                <p>+91 98765 43210</p>
+                <p>Chennai, Tamil Nadu</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Nathigal Trust.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

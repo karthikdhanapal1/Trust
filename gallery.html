@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Nathigal Trust</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;600;700;800&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Masonry Layout for Variable Aspect Ratios (Flyers + Photos) */
+        .gallery-grid {
+            column-count: 3;
+            column-gap: 24px;
+            padding: 20px 0;
+        }
+
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease;
+            background: white;
+            display: inline-block;
+            /* Vital for column layout */
+            width: 100%;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 968px) {
+            .gallery-grid {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .gallery-grid {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="logo.jpg" alt="Nathigal Trust"
+                        style="height: 50px; margin-right: 10px; border-radius: 50%;"> Nathigal Trust
+                </a>
+                <div class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <!-- Navigation will be updated by script -->
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Our Programs</a></li>
+                    <li><a href="impact.html">Our Impact</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="volunteering.html">Volunteer</a></li>
+                    <li><a href="donate.html" class="btn btn-cta">DONATE NOW</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header" style="background-color: var(--light-gray); padding: 80px 0; text-align: center;">
+        <div class="container">
+            <h1>Photo Gallery</h1>
+            <p>Highlights of our events, medical camps, and community service initiatives.</p>
+        </div>
+    </div>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item fade-in-up">
+                    <img src="gallery-1.jpg" alt="Event Poster 1">
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item fade-in-up">
+                    <img src="gallery-2.jpg" alt="Event Poster 2">
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item fade-in-up">
+                    <img src="gallery-3.jpg" alt="Event Poster 3">
+                </div>
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item fade-in-up">
+                    <img src="gallery-4.jpg" alt="Event Poster 4">
+                </div>
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item fade-in-up">
+                    <img src="gallery-5.jpg" alt="Event Poster 5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <a href="index.html" class="logo" style="margin-bottom: 20px;">
+                    <img src="logo.jpg" alt="Nathigal Trust"
+                        style="height: 50px; margin-right: 10px; border-radius: 50%;"> Nathigal Trust
+                </a>
+                <p>Nourishing futures through nutrition and education.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Our Programs</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Charity Lane, CityName</p>
+                <p><i class="fas fa-envelope"></i> info@nathigaltrust.org</p>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Nathigal Trust. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
