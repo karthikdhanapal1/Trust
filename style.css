@@ -737,4 +737,15 @@ textarea:focus {
         margin-top: 0;
         border-radius: 0;
     }
+
+    .counter-grid {
+        grid-template-columns: 1fr;
+        /* Stack vertically on mobile */
+        gap: 30px;
+    }
+
+    .counter-item h3 {
+        font-size: 2.5rem;
+        /* Slightly smaller font */
+    }
 }
